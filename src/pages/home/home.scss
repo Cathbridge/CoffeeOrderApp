@@ -1,3 +1,46 @@
 page-home {
 
 }
+ion-content{
+    background-color: burlywood;
+    background-size: orange;
+
+    h1{
+        text-align: center;
+        color: orangered;
+    }
+
+    .NameInput{
+        border-bottom: 2px solid orangered;
+        
+    }
+    .coffee{
+        margin-left: 18%;
+    }
+    .model{
+        margin-left: 40%;
+    }
+
+    .quantity{
+        margin-left: 20%;
+    }
+    .btnorder{
+        margin-left: 35%; 
+    }
+
+    .remail{
+        margin-left: 25%;
+    }
+    .negative{
+        color: black;
+        width: 25%;
+        background-color: burlywood;
+    }
+    .btn{
+        color: black;
+      
+        background-color: burlywood;
+    }
+
+  
+}

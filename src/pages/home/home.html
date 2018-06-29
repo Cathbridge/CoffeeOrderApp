@@ -1,14 +1,59 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="orange">
     <ion-title>
-      Ionic Blank
+      Coffee Order
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content padding >
+    <div class="NameInput">
+      <ion-item>
+        <ion-input type="text" text-center  placeholder="Name" [(ngModel)]="name"></ion-input>
+      </ion-item>
+    </div>
+    <h1>Toppings</h1>
+    <div class="coffee">
+      
+      <ion-item>
+      <ion-label>Whipped cream</ion-label>
+      <ion-checkbox [(ngModel)]="whipped"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Chocolate</ion-label>
+      <ion-checkbox [(ngModel)]="chocolate"></ion-checkbox>
+    </ion-item>
+    </div>
+    <h1>QUANTITY</h1>
+    <div class="quantity">
+      
+      <ion-item >
+      <button class="negative" ion-button (click)="onAdd(0)">  <font size="5">-</font></button>
+       {{valueOne}}
+      <button class="negative" ion-button (click)="onAdd(1)"><font size="5">+</font></button>
+    </ion-item>
+    </div>
+    <h1>Order Summary</h1>
+    
+      
+
+<div class="model" *ngIf="order">
+    Name: {{name}} <br>
+    {{wCoffee}} <br>
+    {{chocCoffee}} <br>
+    price: {{price}} <br>
+       Quantity: {{valueOne}}
+</div>
+<div class="btnorder">
+<button class="btn"  ion-button (click)= "onOrder()">Order</button>
+</div>
+<div class="remail">
+    <button class="btn" ion-button (click)= "onReset()">Reset </button>
+       
+    <button class="btn" ion-button>Email</button>
+
+</div>
+    
+
 </ion-content>
